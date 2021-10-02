@@ -2,7 +2,7 @@ module.exports = {
   title: `FrontEnd Developer zeromountain`,
   description: `Blog posted about ...`,
   author: `[zeromountain]`,
-  introduction: `I explain with words and code. I explain with words and code. I explain with words and code.`,
+  introduction: `매몰되지 않는 개발자가 되자.`,
   siteUrl: `https://zeromountain.netlify.app`, // Your blog site url
   social: {
     twitter: ``, // Your Twitter account
