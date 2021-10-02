@@ -6,10 +6,10 @@ module.exports = {
   siteUrl: `https://zeromountain.netlify.app`, // Your blog site url
   social: {
     twitter: ``, // Your Twitter account
-    github: `https://github.com/zeromountain`, // Your GitHub account
+    github: `zeromountain`, // Your GitHub account
     medium: ``, // Your Medium account
     facebook: ``, // Your Facebook account
-    linkedin: `https://www.linkedin.com/in/yeongsan-son-b289551b0/`, // Your LinkedIn account
+    linkedin: `yeongsan-son-b289551b0`, // Your LinkedIn account
     instagram: ``, // Your Instagram account
   },
   icon: `content/assets/felog.png`, // Add your favicon

@@ -4,10 +4,10 @@ date: 2019-1-27 16:21:13
 lang: 'en'
 ---
 
-# Your name
+# 손영산(aka.zeromountain)
 
 <div align="center">
 
-_Thank you for reading my resume. If you want to contact me, Please send me an email._
+_"나"만 아는 삶이 아니라 "너"와 "우리"를 아는 삶을 살자를 모토로 개발하고 있는 손영산입니다._
 
 </div>
