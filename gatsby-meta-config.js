@@ -3,7 +3,7 @@ module.exports = {
   description: `Blog posted about ...`,
   author: `[zeromountain]`,
   introduction: `I explain with words and code. I explain with words and code. I explain with words and code.`,
-  siteUrl: ``, // Your blog site url
+  siteUrl: `https://zeromountain.netlify.app`, // Your blog site url
   social: {
     twitter: ``, // Your Twitter account
     github: `https://github.com/zeromountain`, // Your GitHub account
