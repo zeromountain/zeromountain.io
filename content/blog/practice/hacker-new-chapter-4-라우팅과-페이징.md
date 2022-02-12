@@ -1,5 +1,5 @@
 ---
-title: Hacker-New chapter 4 라우팅과 페이징
+title: Hacker-News chapter 4 라우팅과 페이징
 date: 2022-02-12 18:02:46
 category: practice
 thumbnail: { thumbnailSrc }
@@ -12,7 +12,7 @@ draft: false
 
 이전까지의 작업을 통해서 페이지 전환의 기반을 만들었지만, 페이지가 동적으로 전환되지 않았습니다.
 
-이번에는 어플리케이션에서 동적으로 URL을 파싱해서 페이지를 전환시켜주는 router 함수를 만들어 보겠습니다.
+이번에는 어플리케이션에서 동적으로 URL을 파싱해서 페이지를 전환시켜주는 router 함수를 만들어 보겠습니다.1
 
 ### router
 
