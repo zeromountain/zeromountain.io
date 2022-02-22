@@ -1,5 +1,5 @@
 ---
-title: DOM이란 무엇인가?
+title: DOM이란?
 date: 2022-02-22 10:02:13
 category: DOM
 thumbnail: { thumbnailSrc }
