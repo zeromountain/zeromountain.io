@@ -44,14 +44,14 @@ oAuth를 사용하면 기존 로그인에서 진행해야했던 회원가입 대
 
 ## oAuth 용어
 
-Resource Owner : 사용자
-Client : Resource owner를 대신하여 보호된 리소스에 액세스하는 응용프로그램
-Resource server : client의 요청을 수락하고 응답할 수 있는 서버
-Authorization server : Resource server가 액세스 토큰을 발급받는 서버, 즉 클라이언트 및 리소스 소유자를 성공적으로 인증한 후 액세스 토큰을 발급하는 서버
-Authorization grant : 클라이언트가 액세스 토큰을 얻을 때 사용하는 자격 증명의 유형
-Authorization code : access token을 발급받기 전에 필요한 code이며, client ID로 이 code를 받아온 후, client secret과 code를 이용해 Access token 을 받아온다.
-Access token : 보호된 리소스에 액세스하는 데 사용되는 credentials이며, Authorization code와 client secret을 이용해 받아온 이 Access token으로 이제 resource server에 접근을 할 수 있다.
-Scope : 토큰의 권한 범위 (주어진 액세스 토큰을 사용하여 액세스할 수 있는 리소스의 범위)
+- Resource Owner : 사용자
+- Client : Resource owner를 대신하여 보호된 리소스에 액세스하는 응용프로그램
+- Resource server : client의 요청을 수락하고 응답할 수 있는 서버
+- Authorization server : Resource server가 액세스 토큰을 발급받는 서버, 즉 클라이언트 및 리소스 소유자를 성공적으로 인증한 후 액세스 토큰을 발급하는 서버
+- Authorization grant : 클라이언트가 액세스 토큰을 얻을 때 사용하는 자격 증명의 유형
+- Authorization code : access token을 발급받기 전에 필요한 code이며, client ID로 이 code를 받아온 후, client secret과 code를 이용해 Access token 을 받아온다.
+- Access token : 보호된 리소스에 액세스하는 데 사용되는 credentials이며, Authorization code와 client secret을 이용해 받아온 이 Access token으로 이제 resource server에 접근할 수 있다.
+- Scope : 토큰의 권한 범위 (주어진 액세스 토큰을 사용하여 액세스할 수 있는 리소스의 범위)
 
 ## oAuth 로직 플로우
 
