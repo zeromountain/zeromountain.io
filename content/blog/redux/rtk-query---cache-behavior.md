@@ -335,35 +335,45 @@ Redux 문서는 ID로 항목을 쉽게 찾고 `store`에서 업데이트할 수 
 동일한 엔드포인트 쿼리(`useGetUsersQuery(2)`)가 있는 두 구성 요소가 각각 탑재됩니다. 구성 요소를 끌 때 구독자 참조 수가 감소하는 것을 관찰할 수 있습니다. 구독자 참조 횟수가 0이 되도록 두 구성 요소를 모두 끈 후 `Queries` 섹션 아래의 캐시된 데이터가 5초 동안 지속되는 것을 관찰할 수 있습니다(이 데모에서 끝점에 대해 제공한 `keepUnusedDataFor` 값). 구독자 참조 수가 전체 기간 동안 0으로 유지되면 캐시된 데이터가 저장소에서 제거됩니다.
 
 ```js
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { FullUser, User } from "./types";
-import { cacher } from "../rtkQueryCacheUtils";
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
+import { FullUser, User } from './types'
+import { cacher } from '../rtkQueryCacheUtils'
 
 export const api = createApi({
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://jsonplaceholder.typicode.com/"
+    baseUrl: 'https://jsonplaceholder.typicode.com/',
   }),
   // global configuration for the api
   keepUnusedDataFor: 30,
-  tagTypes: [...cacher.defaultTags, "User"],
-  endpoints: (builder) => ({
-    getUsers: builder.query<User[], number>({
-      query: (count) => `users?_start=0&_end=${count}`,
-      providesTags: cacher.providesList("User"),
+  tagTypes: [...cacher.defaultTags, 'User'],
+  endpoints: builder => ({
+    getUsers: builder.query({
+      query: count => `users?_start=0&_end=${count}`,
+      providesTags: cacher.providesList('User'),
       // configuration for an individual endpoint, overriding the api setting
       keepUnusedDataFor: 5,
-      transformResponse: (response: FullUser[]) => {
-        const simpleUsers: User[] = response.map(({ id, name }) => ({
+      transformResponse: response => {
+        const simpleUsers = response.map(({ id, name }) => ({
           id,
-          name
-        }));
-        return simpleUsers;
-      }
-    })
-  })
-});
+          name,
+        }))
+        return simpleUsers
+      },
+    }),
+  }),
+})
 
-export const { useGetUsersQuery } = api;
+export const { useGetUsersQuery } = api
 ```
 
 [reference](https://codesandbox.io/s/rtk-query-cache-subscription-lifetime-example-77tn4?from-embed)
+
+## 마치며...
+
+기업 과제를 진행하면서 데이터 요청에 대한 캐싱 처리를 해야할 필요가 있었다.
+
+처음에 어떻게 처리해야하나 막막했는데, 리덕스 툴킷에 내장된 쿼리에서 캐싱 처리를 지원해 준다는 것을 알고 사용해 보게 되었다.
+
+캐싱 처리를 함으로써 불필요한 재요청을 하지 않도록 할 수 있기 때문에, 서버에 과부하가 생기는 일을 방지할 수 있을거라고 생각되었다.
+
+이번엔 프레임워크의 도움으로 캐싱 처리를 해결했지만, 프레임워크를 사용할 수 없을 경우를 대비해 캐시 최적화에 대한 학습도 꾸준히 해야겠다.
